@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/movies.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Noto+Serif&family=Roboto+Condensed:wght@300&family=The+Nautigal&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Noto+Serif&family=Roboto+Condensed:wght@300&family=The+Nautigal&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Noto+Serif&family=Roboto+Condensed:wght@300&family=The+Nautigal&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/2a236ea976.js"></script>
+    <title>Movies</title>
+</head>
+<body>
+<div class="header">
+    <div class="menu-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <p class="header_logo ml-4">Pellicula</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="page.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="signup.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="login_page.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="next_container">
+    <br>
+    <br>
+    <div class="bg-text" class="container-fluid">Harry Potter's universe</div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="assets/images/HP.jpg" style="width:100%">
+            <div class="text">Hogwarts</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="assets/images/HP1.jpg" style="width:100%">
+            <div class="text">Harry Potter and the Griffin</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="assets/images/HP2.jpg" style="width:100%">
+            <div class="text">Hogwarts hall</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="assets/images/HP3.jpg" style="width:100%">
+            <div class="text">Library</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="assets/images/HP4.jpg" style="width:100%">
+            <div class="text">Troll and students</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="assets/images/HP5.png" style="width:100%">
+            <div class="text">Dementors</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="assets/images/HP6.jpg" style="width:100%">
+            <div class="text">The Magic wand</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</div>
+<div class="media_container">
+    <br>
+    <br>
+    <h2 style="font-size: 50px; text-align: center;">Harry Potter and the Prisoner of Azkaban</h2>
+    <p>Click on to download Harry Potter wallpapers:<p>
+    <a href="assets/images/HP1.jpg" download="photos">
+        <img src="assets/images/HP1.jpg" alt="Pellicula" width="120" height="75"></a>
+    <a href="assets/images/HP2.jpg" download="photos">
+        <img src="assets/images/HP2.jpg" alt="Pellicula" width="120" height="75"></a>
+        <a href="assets/images/HP3.jpg" download="photos">
+        <img src="assets/images/HP3.jpg" alt="Pellicula" width="120" height="75">
+    </a>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video src="assets/images/Harry%20Potter%203.mp4" controls></video>
+        </div>
+    </div>
+    <h3 style=" text-align: center; font-size: 50px;">Harry Potter and the Goblet of Fire</h3>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video src="assets/images/Harry%20Potter%204.mkv" controls></video>
+        </div>
+    </div>
+    <h3 style=" text-align: center; font-size: 50px;">Joker</h3>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video src="assets/images/joker.mp4" controls></video>
+        </div>
+    </div>
+    <h3 style=" text-align: center; font-size: 50px;">Spider-Man: No Way Home</h3>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video src="assets/images/spiderman.mp4" controls></video>
+        </div>
+    </div>
+    <h3 style=" text-align: center; font-size: 50px;">Minions: The Rise of Gru</h3>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video src="assets/images/minions.mp4" controls></video>
+        </div>
+    </div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">top</button>
+<script>
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<div class="rights">
+    <h6 class="copyright">
+        Copyright est.2021 &copy;Pellicula. Powered by Rosiettan Company. All Rights Reserved
+    </h6>
+</div>
+</div>
+</body>
+</html>
